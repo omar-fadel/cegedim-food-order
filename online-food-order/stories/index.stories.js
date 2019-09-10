@@ -24,4 +24,10 @@ storiesOf('Button', module)
   .add('with title', () => <NavBar title="Sample title"/>);
 
   storiesOf('Restaurant', module)
-  .add('with details', () => <Restaurant name="Burgerizer" desc="Serves the best burger in city" rating="5" picture="https://inkbotdesign.com/wp-content/uploads/2019/03/new-burger-king-logo-design.png.webp" />);
+  .add('with details', () => {
+    const restaurant = {name:"Burger King", 
+    desc:"Serves the best burger in city", 
+    rating:"5", 
+    picture:"https://inkbotdesign.com/wp-content/uploads/2019/03/new-burger-king-logo-design.png.webp"};
+  return <Restaurant restaurant= {restaurant} /> }
+  );

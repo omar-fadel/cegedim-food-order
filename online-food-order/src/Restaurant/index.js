@@ -27,19 +27,19 @@ function Restaurant(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image= {props.picture}
+          image= {props.restaurant.picture}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.name}
+            {props.restaurant.name}
           </Typography>
           <Typography component="p">
               <Description/> &emsp;
-            {props.desc}
+            {props.restaurant.desc}
           </Typography>
           <Typography component="p">
               <Stars/> &emsp;
-            {props.rating}
+            {props.restaurant.rating}
           </Typography>
         </CardContent>
       </CardActionArea>
