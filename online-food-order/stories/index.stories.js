@@ -6,6 +6,8 @@ import { linkTo } from '@storybook/addon-links';
 
 
 import { Button, Welcome } from '@storybook/react/demo';
+import NavBar from '../src/NavigationBar/index';
+import Restaurant from '../src/Restaurant/index';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -18,3 +20,15 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+  storiesOf('NavBar', module)
+  .add('with title', () => <NavBar title="Sample title"/>);
+
+  storiesOf('Restaurant', module)
+  .add('with details', () => {
+    const restaurant = {name:"Burger King", 
+    desc:"Serves the best burger in city", 
+    rating:"5", 
+    picture:"https://inkbotdesign.com/wp-content/uploads/2019/03/new-burger-king-logo-design.png.webp"};
+  return <Restaurant restaurant= {restaurant} /> }
+  );

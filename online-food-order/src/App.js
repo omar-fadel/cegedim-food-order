@@ -9,8 +9,13 @@ const items = [
   'thirdItem',
   'fourthItem'
 ]
+import Restaurant  from './Restaurant/index';
 
 function App() {
+  const restaurant = {name:"Burger King", 
+  desc:"Serves the best burger in city", 
+  rating:"5", 
+  picture:"https://inkbotdesign.com/wp-content/uploads/2019/03/new-burger-king-logo-design.png.webp"};
   return (
     <React.Fragment>
       <Navbar items = {items}/>
